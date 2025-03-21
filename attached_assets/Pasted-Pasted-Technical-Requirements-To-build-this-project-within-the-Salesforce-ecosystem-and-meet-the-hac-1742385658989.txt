@@ -1,0 +1,47 @@
+Pasted-Technical-Requirements-To-build-this-project-within-the-Salesforce-ecosystem-and-meet-the-hackathon-1742367239400.txt
+Technical Requirements
+To build this project within the Salesforce ecosystem and meet the hackathon’s requirements, here are the technical components:
+1. Platform
+•	Salesforce Platform: Use the provisioned Salesforce org (e.g., a Developer Edition or Hackathon-specific org). 
+o	Environment: Lightning Experience.
+o	Core Features: Agentforce, Custom Objects, Flows, Apex.
+2. Tools & Languages
+•	Agent Builder: 
+o	Purpose: Configure the AI-driven agent to interpret ticket data and trigger actions.
+o	Configuration: Define agent prompts, intents, and responses.
+•	Apex: 
+o	Purpose: Custom logic for ticket assignment and Slack integration.
+o	Usage: Classes and triggers to process ticket data and call external APIs.
+•	Salesforce Flow: 
+o	Purpose: No-code automation for ticket routing and response suggestions.
+o	Type: Record-triggered Flow.
+•	Lightning Web Components (LWC): 
+o	Purpose: Frontend UI for employees to interact with the agent (e.g., ticket dashboard).
+o	Framework: Salesforce Lightning Design System (SLDS) for styling.
+•	Slack API: 
+o	Purpose: Send real-time notifications to support teams.
+o	Integration: Via Apex HTTP callouts to Slack’s Webhook or Chat API.
+3. Data Model
+•	Custom Object: Support_Ticket__c 
+o	Fields: 
+	Ticket_ID__c (Auto Number): Unique identifier.
+	Subject__c (Text): Ticket title.
+	Description__c (Long Text Area): Ticket details.
+	Priority__c (Picklist): High, Medium, Low.
+	Category__c (Picklist): Billing, Technical, General.
+	Assigned_Team__c (Text): Team assigned (e.g., Billing Team).
+	Status__c (Picklist): New, In Progress, Resolved.
+	Suggested_Response__c (Long Text Area): AI-generated response.
+•	Standard Object: Case (optional fallback for compatibility).
+4. Third-Party Integration
+•	Slack: 
+o	API: Slack Incoming Webhooks or Chat API.
+o	Authorization: Obtain a Slack app token or webhook URL (publicly available, complies with hackathon rules).
+o	Purpose: Notify teams of new ticket assignments.
+5. Development Environment
+•	Salesforce CLI: For local development and deployment to the provisioned org.
+•	VS Code: With Salesforce Extensions for coding Apex and LWC.
+•	GitHub: Optional public repository for version control and submission bonus.
+6. Security & Compliance
+•	Permissions: Ensure the agent operates within Salesforce security (e.g., profile-based access).
+•	IP: Use only original code or open-source tools with proper licensing (e.g., MIT-licensed libraries).
